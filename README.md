@@ -1,6 +1,6 @@
 # CHATDB – QUERYING HISTORICAL STOCK DATA
 
-ChatDB is a Python-based Command Line Interface (CLI) tool designed for querying and managing MySQL databases. It provides seamless interaction with databases, offering features such as natural language-to-SQL conversion, dataset uploads, query execution, and table exploration. The primary focus of ChatDB is to create an interactive application that enables users to access historical financial data, including information like open prices, close prices, highs, lows, trading volume, and more. Users can interact with the CLI using sample query languages to retrieve and explore historical financial insights efficiently.
+ChatDB is a tool designed for querying and managing MySQL databases, which runs on Python-based Command Line Interface. It provides seamless interaction with databases, offering features such as natural language-to-SQL conversion, dataset uploads, query execution, and table exploration. The primary focus of ChatDB is to create an interactive application that enables users to access historical financial data, including information like open prices, close prices, highs, lows, trading volume, and more. Users can interact with the CLI using sample query languages to retrieve and explore historical financial insights efficiently.
 
 
 ---
