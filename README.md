@@ -26,8 +26,7 @@ Before running the tool, ensure you have the following:
 3. Required Python libraries:
    - `pymysql`
    - `pandas`
-   - `tabulate`
 
 Install dependencies using:
 ```bash
-pip install pymysql pandas tabulate
+pip install pymysql pandas
