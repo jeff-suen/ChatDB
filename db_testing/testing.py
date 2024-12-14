@@ -1,5 +1,5 @@
 import unittest
-from db_setup import ChatDB 
+from db_main.db_setup import ChatDB 
 
 class TestChatDB(unittest.TestCase):
     def setUp(self):

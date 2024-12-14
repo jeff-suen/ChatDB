@@ -1,4 +1,4 @@
-from db_setup import ChatDB 
+from db_main.db_setup import ChatDB 
 
 def main():
     """Main function for the ChatDB CLI."""
