@@ -1,0 +1,25 @@
+{
+    "db_cred": [
+        {
+            "name": "stock_mag7",
+            "host": "localhost",
+            "user": "root",
+            "password": "490993072",
+            "db_name": "stock_mag7"
+        },
+        {
+            "name": "etf_indexes",
+            "host": "localhost",
+            "user": "root",
+            "password": "490993072",
+            "db_name": "etf_indexes"
+        },
+        {
+            "name": "etf_biotech_top3",
+            "host": "localhost",
+            "user": "root",
+            "password": "490993072",
+            "db_name": "etf_biotech_top3"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "db_cred": [
+        {
+            "name": "testing",
+            "host": "localhost",
+            "user": "root",
+            "password": "490993072",
+            "db_name": "testing_db"
+        }
+    ]
+}
