@@ -32,11 +32,11 @@ A JSON file containing database credentials. The structure is as follows:
 
 - **`main.py`**:
 The entry point for the application. Handles user interaction through the command-line interface and provides the following features:
-- Database exploration
-- Query suggestion
-- Natural language to SQL conversion
-- Query execution
-- Dataset upload
+  - Database exploration
+  - Query suggestion
+  - Natural language to SQL conversion
+  - Query execution
+  - Dataset upload
 
 ### **2. `data/`**
 Directory to store CSV datasets for upload to there databases.
