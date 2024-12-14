@@ -14,7 +14,7 @@ This directory contains the core application code for ChatDB.
   - Defines the `ChatDB` class, which handles database connection, query generation, and execution.
   - Includes functions for natural language processing, SQL query generation, and dataset upload.
 
-### **2. `db_cred.json`**
+- **`db_cred.json`**:
 A JSON file containing database credentials. The structure is as follows:
 ```json
 {
@@ -30,7 +30,7 @@ A JSON file containing database credentials. The structure is as follows:
 ```
 **Note**: Replace placeholders (`<DB_HOST>`, `<DB_USER>`, etc.) with actual database connection details.
 
-### **3. `main.py`**
+- **`main.py`**:
 The entry point for the application. Handles user interaction through the command-line interface and provides the following features:
 - Database exploration
 - Query suggestion
@@ -38,8 +38,8 @@ The entry point for the application. Handles user interaction through the comman
 - Query execution
 - Dataset upload
 
-### **4. `datasets/`**
-Directory to store CSV datasets for upload to the database.
+### **2. `data/`**
+Directory to store CSV datasets for upload to there databases.
 
 ---
 
