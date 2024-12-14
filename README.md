@@ -86,7 +86,7 @@ Directory to store CSV datasets for upload to there databases.
 3. **Convert Natural Language to SQL**:
    - Select option `3`.
    - Choose a table from the database.
-   - Enter a natural language query (e.g., `total sales by category`).
+   - Enter a natural language query (e.g., `total open price by date`).
    - The program will generate and display an equivalent SQL query.
 
 4. **Execute a SQL Query**:
@@ -112,8 +112,8 @@ Directory to store CSV datasets for upload to there databases.
 2. Connect to a database by selecting its index.
 3. Explore tables or upload a dataset as needed.
 4. Enter natural language queries like:
-   - `total revenue by product`
-   - `average price where category is electronics`
+   - `sum open price by date`
+   - `find average close price group by date`
 5. Execute SQL queries directly for advanced operations.
 
 ---
@@ -123,6 +123,5 @@ Directory to store CSV datasets for upload to there databases.
 - Uploaded datasets should be in CSV format and match the database schema for seamless integration.
 
 ---
-
-For further questions or issues, feel free to contact the developer.
+Feel free drop any comment, love to discuss!
 
