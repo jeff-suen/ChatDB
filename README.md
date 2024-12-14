@@ -1,32 +1,128 @@
-# CHATDB – QUERYING HISTORICAL STOCK DATA
+# ChatDB - Querying Historical Stock Data
 
-ChatDB is a tool designed for querying and managing MySQL databases, which runs on Python-based Command Line Interface. It provides seamless interaction with databases, offering features such as natural language-to-SQL conversion, dataset uploads, query execution, and table exploration. The primary focus of ChatDB is to create an interactive application that enables users to access historical financial data, including information like open prices, close prices, highs, lows, trading volume, and more. Users can interact with the CLI using sample query languages to retrieve and explore historical financial insights efficiently.
-
+## Overview
+ChatDB is a command-line application designed to query historical stock data using both SQL queries and natural language inputs. Users can upload datasets, explore databases, generate SQL queries from natural language, and execute SQL queries on the connected database.
 
 ---
 
-## Features
+## File Structure
 
-- **Database Connectivity**: Connect to MySQL databases using credentials stored in a JSON file.
-- **Explore Tables**: List all tables in the database and view their columns and sample data in a tabular format.
-- **Query Suggestions**: Generate SQL queries with constructs like `GROUP BY`, `ORDER BY`, and `WHERE`.
-- **Natural Language to SQL**: Convert plain English queries into SQL statements.
-- **Upload Datasets**: Upload CSV files into database tables with ease.
-- **Execute SQL Queries**: Run custom SQL queries and view results in a formatted table.
-- **Interactive CLI**: User-friendly menu interface for seamless interaction.
+### **1. `db_main/`**
+This directory contains the core application code for ChatDB.
+
+- **`db_setup.py`**:
+  - Defines the `ChatDB` class, which handles database connection, query generation, and execution.
+  - Includes functions for natural language processing, SQL query generation, and dataset upload.
+
+### **2. `db_cred.json`**
+A JSON file containing database credentials. The structure is as follows:
+```json
+{
+  "db_cred": [
+    {
+      "host": "<DB_HOST>",
+      "user": "<DB_USER>",
+      "password": "<DB_PASSWORD>",
+      "db_name": "<DB_NAME>"
+    }
+  ]
+}
+```
+**Note**: Replace placeholders (`<DB_HOST>`, `<DB_USER>`, etc.) with actual database connection details.
+
+### **3. `main.py`**
+The entry point for the application. Handles user interaction through the command-line interface and provides the following features:
+- Database exploration
+- Query suggestion
+- Natural language to SQL conversion
+- Query execution
+- Dataset upload
+
+### **4. `datasets/`**
+Directory to store CSV datasets for upload to the database.
 
 ---
 
 ## Prerequisites
 
-Before running the tool, ensure you have the following:
+1. **Python**: Ensure Python 3.x is installed on your system.
+2. **Dependencies**:
+   Install required Python packages:
+   ```bash
+   pip install pymysql pandas nltk
+   ```
+3. **Database**:
+   Set up the database and populate `db_cred.json` with connection details.
+4. **NLTK Resources**:
+   Download necessary NLTK data:
+   ```bash
+   python -c "import nltk; nltk.download('wordnet')"
+   ```
 
-1. **Python 3.7 or higher**
-2. **MySQL Server** installed and running
-3. Required Python libraries:
-   - `pymysql`
-   - `pandas`
+---
 
-Install dependencies using:
-```bash
-pip install pymysql pandas
+## Commands to Run the Program
+
+1. **Navigate to the Project Directory**:
+   ```bash
+   cd final_proj
+   ```
+
+2. **Run the Application**:
+   ```bash
+   python main.py
+   ```
+
+---
+
+## Features and How to Use Them
+
+1. **Explore Tables in the Database**:
+   - Select option `1` to list tables and their columns, along with sample data.
+
+2. **Suggest Example Queries**:
+   - Select option `2` to generate SQL query examples for the selected table. You can optionally specify constructs like `GROUP BY`, `WHERE`, etc.
+
+3. **Convert Natural Language to SQL**:
+   - Select option `3`.
+   - Choose a table from the database.
+   - Enter a natural language query (e.g., `total sales by category`).
+   - The program will generate and display an equivalent SQL query.
+
+4. **Execute a SQL Query**:
+   - Select option `4`.
+   - Enter a valid SQL query to execute on the database.
+   - Results will be displayed in a tabular format.
+
+5. **Upload a Dataset**:
+   - Select option `5`.
+   - Provide the path to a CSV file and specify the table name for storage in the database.
+
+6. **Exit the Program**:
+   - Select option `6` to close the database connection and exit the program.
+
+---
+
+## Example Workflow
+
+1. Start the program:
+   ```bash
+   python main.py
+   ```
+2. Connect to a database by selecting its index.
+3. Explore tables or upload a dataset as needed.
+4. Enter natural language queries like:
+   - `total revenue by product`
+   - `average price where category is electronics`
+5. Execute SQL queries directly for advanced operations.
+
+---
+
+## Notes
+- Ensure the database connection details in `db_cred.json` are correct.
+- Uploaded datasets should be in CSV format and match the database schema for seamless integration.
+
+---
+
+For further questions or issues, feel free to contact the developer.
+
